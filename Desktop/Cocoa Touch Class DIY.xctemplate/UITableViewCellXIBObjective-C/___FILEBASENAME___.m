@@ -35,11 +35,6 @@
     return self;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
-}
-
 - (void)dealloc {
     
 }
