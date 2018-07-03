@@ -1,80 +1,37 @@
-/*********************************************
- 工程名称: ___PROJECTNAME___
- 文件名称: ___FILENAME___
- 创建者：  ___FULLUSERNAME___  2014375614@qq.com/15728136279
- 版权:    ___COPYRIGHT___
- 创建时间: ___DATE___
- 修改人:
- 修改时间:
- *********************************************/
+//___FILEHEADER___
 
-
+#import "___FILEBASENAME___.h"
 
 /* ViewController */
 /* View  */
-#import "___FILEBASENAME___.h"
 /* Data  */
 /* Other */
 #import <Masonry.h> //自动布局第三方库
 
-
-
-
-#pragma mark
-#pragma mark - ___FILEBASENAMEASIDENTIFIER___匿名分类
 @interface ___FILEBASENAMEASIDENTIFIER___()
+
+#pragma mark ViewModel
+@property (nonatomic, strong, readwrite) <#id#>* viewModel;//!< <#描述#>
+
+#pragma mark View
+@property (nonatomic, strong) UIView* demoView;//!< 示例View请删除
+@property (nonatomic, strong) UILabel* demoLabel;//!< 示例Label请删除
 
 @end
 
-
-
-
-#pragma mark
-#pragma mark - ___FILEBASENAMEASIDENTIFIER___类实现
 @implementation ___FILEBASENAMEASIDENTIFIER___
 
-#pragma mark
-#pragma mark - View setter, getter
-/**
- 对象成员变量的“取值”,“赋值”相关操作
- */
 
-
-
-
-#pragma mark
-#pragma mark - View 子控件的事件响应
-/**
-   View 子控件的事件响应，并通过代理传递给ViewController
-*/
-
-
-
-
-#pragma mark
-#pragma mark - View所实现的delegate，datasource
-/**
-   view实现的协议，代理等方法
- */
-
-
-
-
-
-#pragma mark
-#pragma mark - View声明周期
+#pragma mark - ==================== Life Circle ====================
 /**
    init 无参数初始化
  */
-- ( instancetype ) init {
+- (instancetype)init {
     
     self = [super init];
     if ( self ) {
-        /* 1. 设置view以及subviews的基本属性*/
         [self setupBaseAttribute];
-        /* 2. 添加subviews*/
         [self setupSubviews];
-        /* 3. subviews的布局约束*/
         [self setupSubviewsLayout];
     }
     return self;
@@ -83,33 +40,38 @@
 /**
    initWithFrame 带Frame初始化
  */
-- ( instancetype ) initWithFrame:( CGRect ) frame {
+- (instancetype)initWithFrame:(CGRect)frame {
     
     self = [super initWithFrame:frame];
     if ( self ) {
-        /* 1. 设置view以及subviews的基本属性*/
         [self setupBaseAttribute];
-        /* 2. 添加subviews*/
         [self setupSubviews];
-        /* 3. subviews的布局约束*/
         [self setupSubviewsLayout];
     }
     return self;
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    
+}
 
+- (void)dealloc {
+    
+}
+
+#pragma mark - ==================== Init View ====================
 /**
    1.设置view以及subviews的基本属性
  */
-- ( void ) setupBaseAttribute {
+- (void)setupBaseAttribute {
     
 }
 
 /**
    2.添加subviews
  */
-- ( void ) setupSubviews {
-    
+- (void)setupSubviews {
     
 }
 
@@ -117,22 +79,52 @@
 /**
    3.subviews的布局约束
  */
-- ( void ) setupSubviewsLayout {
-    
+- (void)setupSubviewsLayout {
     
 }
 
 
-
-
-
-
-#pragma mark
-#pragma mark --  subview定义区
+#pragma mark - ==================== Data ====================
 /**
-    subviews定义区
+ 初始化View
+
+ @param data viewModel
  */
+- (void)configViewWithViewModel:(<#id#>)viewModel {
+    self.viewModel = viewModel;
+    
+}
+
+#pragma mark - ==================== action ====================
 
 
+#pragma mark - ==================== delegate ====================
 
+
+#pragma mark - ==================== setters & getters ====================
+
+- (UIView *)demoView
+{
+    if (!_demoView) {
+        _demoView = ({
+            UIView *view = [UIView new];
+            view;
+        });
+    }
+    return _demoView;
+}
+
+- (UILabel *)demoLabel
+{
+    if (!_demoLabel) {
+        _demoLabel = ({
+            UILabel *label = [label new];
+            label.numberOfLines = 0;
+            label.font = [UIFont systemFontOfSize:16];
+            label.textColor = [UIColor lightTextColor];
+            label;
+        });
+    }
+    return _demoLabel;
+}
 @end
